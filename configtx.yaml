@@ -41,11 +41,11 @@ Organizations:
       Readers:
           Type: Signature
           # Any member can READ e.g., query
-          Rule: "OR('ThuDucHospitalMSP.member')"
+          Rule: "OR('ThuDucHospitalMSP.admin','ThuDucHospitalMSP.client','ThuDucHospitalMSP.peer')"
       Writers:
           Type: Signature
           # Any member can WRITE e.g., submit transaction
-          Rule: "OR('ThuDucHospitalMSP.member')"
+          Rule: "OR('ThuDucHospitalMSP.admin','ThuDucHospitalMSP.client')"
       Admins:
           Type: Signature
           # Either Acme admin OR Orderer Admin can carry out admin activities
@@ -53,7 +53,7 @@ Organizations:
       Endorsement:
           Type: Signature
           # Any member can act as an endorser
-          Rule: "OR('ThuDucHospitalMSP.member')"
+          Rule: "OR('ThuDucHospitalMSP.peer')"
     AnchorPeers:
       - Host: peer1-thuduchospital
         Port: 30751
@@ -66,18 +66,18 @@ Organizations:
       Readers:
           Type: Signature
           # Any member
-          Rule: "OR('GoVapHospitalMSP.member')"
+          Rule: "OR('GoVapHospitalMSP.peer','GoVapHospitalMSP.admin','GoVapHospitalMSP.client')"
       Writers:
           Type: Signature
           # Any member
-          Rule: "OR('GoVapHospitalMSP.member')"
+          Rule: "OR('GoVapHospitalMSP.admin','GoVapHospitalMSP.client')"
       Admins:
           Type: Signature
           # BOTH Budget Admin AND Orderer Admin needed for admin activities
           Rule: "OR('GoVapHospitalMSP.admin')"
       Endorsement:
           Type: Signature
-          Rule: "OR('GoVapHospitalMSP.member')"
+          Rule: "OR('GoVapHospitalMSP.peer')"
     AnchorPeers:
       - Host: peer1-govaphospital
         Port: 30851
@@ -340,5 +340,6 @@ Profiles:
 
 
   
+
 
 
