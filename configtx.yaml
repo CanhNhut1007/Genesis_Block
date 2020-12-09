@@ -319,9 +319,9 @@ Profiles:
 
                                        
                   
-  OrdererOrgChannel:
+  HospitalChannel:
     <<: *ChannelDefaults
-    Consortium: OrdererOrgConsortium
+    Consortium: HospitalConsortium
         
     Application:
         <<: *ApplicationDefaults
