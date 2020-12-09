@@ -94,6 +94,7 @@ Orderer: &OrdererDefaults
     - orderer1-ordererorg:30750
     - orderer2-ordererorg:31750
     - orderer3-ordererorg:32750
+    - orderer4-ordererorg:29750
   # Policies for Orderer
   Policies:
     Readers:
@@ -135,7 +136,12 @@ Orderer: &OrdererDefaults
           - Host: orderer3-ordererorg
             Port: 32750
             ClientTLSCert: OrdererOrg/orderer3/tls-cert/cert.pem
-            ServerTLSCert: OrdererOrg/orderer3/tls-cert/cert.pem   
+            ServerTLSCert: OrdererOrg/orderer3/tls-cert/cert.pem
+            
+          - Host: orderer4-ordererorg
+            Port: 29750
+            ClientTLSCert: OrdererOrg/orderer4/tls-cert/cert.pem
+            ServerTLSCert: OrdererOrg/orderer4/tls-cert/cert.pem 
 
       # Options to be specified for all the etcd/raft nodes. The values here
       # are the defaults for all new channels and can be modified on a
