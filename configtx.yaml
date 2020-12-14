@@ -66,7 +66,7 @@ Organizations:
       Readers:
           Type: Signature
           # Any member
-          Rule: "OR('GoVapHospitalMSP.peer')"
+          Rule: "OR('GoVapHospitalMSP.member')"
       Writers:
           Type: Signature
           # Any member
